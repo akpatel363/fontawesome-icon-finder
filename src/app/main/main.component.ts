@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { data } from 'src/app/data/data'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { trigger, transition, style, animate, query, animateChild, group, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-main',
@@ -12,27 +11,19 @@ import { trigger, transition, style, animate, query, animateChild, group, stagge
 export class MainComponent implements OnInit {
   classes = data;
   searchForm:FormGroup
-  constructor(private fb:FormBuilder,private router:Router) {
-    console.log(data.length)
-    this.searchForm = this.fb.group({
-      'query':[null,Validators.required]
-    })
-  }
-
+  constructor(private router:Router) {}
   ngOnInit() {
   }
-  submit(){
-    if(this.searchForm.valid){
-      this.filter(this.searchForm.value.query.toLowerCase())
+  submit(ele:HTMLInputElement){
+    if(ele.value!=null){
+      this.filter(ele.value.toLowerCase())
     }else{
       this.classes = data
     }
   }
-
   navigate(className:string){
     this.router.navigate(['/details',data.indexOf(className)])
   }
-
   filter(query:string){
     this.classes = data.filter((value,index)=>{
       if(value.includes(query)){
@@ -40,5 +31,4 @@ export class MainComponent implements OnInit {
       }
     })
   }
-
 }
