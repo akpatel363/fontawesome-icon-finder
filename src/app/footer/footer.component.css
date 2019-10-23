@@ -1,0 +1,9 @@
+footer *{
+    margin: 0;
+}
+footer{
+    padding: 10px;
+}
+h5{
+    margin-bottom: 6px !important;
+}

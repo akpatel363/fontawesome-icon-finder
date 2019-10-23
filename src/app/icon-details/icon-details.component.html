@@ -1,0 +1,23 @@
+<div class="container" *ngIf="no<676; else notFound">
+    <div class="my-4 py-3 text-center h4">
+        <i [class]="className.concat(' pr-1 px-sm-3 fa-5x')"></i>
+        <i [class]="className.concat(' px-1 px-sm-3 fa-4x')"></i>
+        <i [class]="className.concat(' px-1 px-sm-3 fa-3x')"></i>
+        <i [class]="className.concat(' pl-1 px-sm-3 fa-2x')"></i>
+    </div>
+    <i class="fa fa-air-freshener"></i>
+    <div class="py-3">
+        <p class="display-4">{{className}}</p>
+        <h5>&lt;i class="<strong>{{className}}</strong>"&gt;&lt;/i&gt;</h5>
+    </div>
+    <div class="alert alert-primary my-3">
+        For all these icons you must include the fontawesome css file in your HTML document.<br>
+        You can find the web link <a class="alert-link" href="https://www.bootstrapcdn.com/fontawesome/">here.</a>.
+    </div>
+</div>
+
+<ng-template #notFound>
+    <div class="container text-center">
+        <h1 class="my-3 pt-3">Nothing Found.</h1>
+    </div>
+</ng-template>
