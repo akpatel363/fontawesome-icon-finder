@@ -3,7 +3,7 @@
     <p class="display-4">Icons</p>
     <div class="row" *ngIf="classes.length>0; else nothingFound">
         <div class="col-xl-1 col-lg-1 col-md-2 col-3 h1 text-center" *ngFor="let class of classes">
-            <i [class]="class.concat(' h1')" (click)="navigate(class)"></i>
+            <i class="material-icons h1" (click)="navigate(class)">{{class}}</i>
         </div>
     </div>
 </div>

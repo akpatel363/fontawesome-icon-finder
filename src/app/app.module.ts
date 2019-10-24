@@ -8,6 +8,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { IconDetailsComponent } from './icon-details/icon-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { MaterialIconsComponent } from './material-icons/material-icons.component';
+import { MiDetailsComponent } from './mi-details/mi-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AboutComponent } from './about/about.component';
     PageNotFoundComponent,
     IconDetailsComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    MaterialIconsComponent,
+    MiDetailsComponent
   ],
   imports: [
     BrowserModule,

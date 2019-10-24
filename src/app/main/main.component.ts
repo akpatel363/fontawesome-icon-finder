@@ -10,10 +10,8 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   classes = data;
-  searchForm:FormGroup
   constructor(private router:Router) {}
-  ngOnInit() {
-  }
+  ngOnInit() {}
   submit(ele:HTMLInputElement){
     if(ele.value!=null){
       this.filter(ele.value.toLowerCase())
