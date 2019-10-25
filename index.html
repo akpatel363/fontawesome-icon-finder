@@ -7,8 +7,39 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .loader-container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .my-loader{
+      width: 150px;
+      height: 150px;
+      border-right: 10px solid royalblue;
+      border-left: 10px solid royalblue;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-radius: 50%;
+      animation: 1s rotate-loader infinite alternate-reverse;
+    }
+    @keyframes rotate-loader{
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 <link rel="stylesheet" href="styles.e2419a8c4a24869660c4.css"></head>
 <body>
-  <app-root></app-root>
-<script src="runtime-es2015.e8a2810b3b08d6a1b6aa.js" type="module"></script><script src="runtime-es5.e8a2810b3b08d6a1b6aa.js" nomodule defer></script><script src="polyfills-es5.931f63c2feef40f602a6.js" nomodule defer></script><script src="polyfills-es2015.0ef207fb7b4761464817.js" type="module"></script><script src="scripts.6cf4da7113bcd1218d80.js" defer></script><script src="main-es2015.38779ece08341870d389.js" type="module"></script><script src="main-es5.38779ece08341870d389.js" nomodule defer></script></body>
+  <app-root>
+    <div class="loader-container">
+      <span class="my-loader"></span>
+    </div>
+  </app-root>
+<script src="runtime-es2015.e8a2810b3b08d6a1b6aa.js" type="module"></script><script src="runtime-es5.e8a2810b3b08d6a1b6aa.js" nomodule defer></script><script src="polyfills-es5.931f63c2feef40f602a6.js" nomodule defer></script><script src="polyfills-es2015.0ef207fb7b4761464817.js" type="module"></script><script src="scripts.6cf4da7113bcd1218d80.js" defer></script><script src="main-es2015.a492a55b86460cc0db8a.js" type="module"></script><script src="main-es5.a492a55b86460cc0db8a.js" nomodule defer></script></body>
 </html>
