@@ -8,8 +8,39 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .loader-container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .my-loader{
+      width: 150px;
+      height: 150px;
+      border-right: 10px solid royalblue;
+      border-left: 10px solid royalblue;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-radius: 50%;
+      animation: 1s rotate-loader infinite alternate-reverse;
+    }
+    @keyframes rotate-loader{
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="loader-container">
+      <span class="my-loader"></span>
+    </div>
+  </app-root>
 </body>
 </html>
