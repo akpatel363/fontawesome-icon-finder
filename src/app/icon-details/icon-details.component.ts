@@ -14,7 +14,6 @@ export class IconDetailsComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe((obj)=>{
       this.no = obj['params'].no
       this.className = data[this.no]
-      
     })
   }
 
