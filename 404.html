@@ -1,45 +1,71 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>FontawesomeIconFinder</title>
-  <base href="https://akpatel363.github.io/fontawesome-icon-finder/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="https://akpatel363.github.io/fontawesome-icon-finder/">  <meta name="theme-color" content="#0275d8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
-    .loader-container{
+    .spinner-container {
+      position: relative;
       width: 100%;
       height: 100vh;
-      display: flex;
       justify-content: center;
       align-items: center;
     }
-    .my-loader{
+    .spinner-container span {
+      border-top: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .spinner-container span:nth-child(1) {
+      width: 180px;
+      height: 180px;
+      border-left: 10px solid royalblue;
+      border-bottom: 10px solid royalblue;
+      animation: 1.5s loader-rotate infinite linear;
+    }
+    .spinner-container span:nth-child(2) {
       width: 150px;
       height: 150px;
-      border-right: 10px solid royalblue;
-      border-left: 10px solid royalblue;
-      border-bottom: 10px solid transparent;
-      border-top: 10px solid transparent;
-      border-radius: 50%;
-      animation: 1s rotate-loader infinite alternate-reverse;
+      border-left: 10px solid tomato;
+      border-bottom: 10px solid tomato;
+      animation: 1s loader-rotate infinite linear;
     }
-    @keyframes rotate-loader{
-      0%{
-        transform:rotate(0deg);
+    .spinner-container span:nth-child(3) {
+      width: 120px;
+      height: 120px;
+      border-left: 10px solid gold;
+      border-bottom: 10px solid gold;
+      animation: .5s loader-rotate infinite linear;
+    }
+    @keyframes loader-rotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
       }
-      100%{
-        transform: rotate(360deg);
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
       }
     }
   </style>
 <link rel="stylesheet" href="styles.e2419a8c4a24869660c4.css"></head>
+
 <body>
   <app-root>
-    <div class="loader-container">
-      <span class="my-loader"></span>
+    <div class="spinner-container">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </app-root>
-<script src="runtime-es2015.e8a2810b3b08d6a1b6aa.js" type="module"></script><script src="runtime-es5.e8a2810b3b08d6a1b6aa.js" nomodule defer></script><script src="polyfills-es5.931f63c2feef40f602a6.js" nomodule defer></script><script src="polyfills-es2015.0ef207fb7b4761464817.js" type="module"></script><script src="scripts.6cf4da7113bcd1218d80.js" defer></script><script src="main-es2015.70df27a7bb6caa4f60ef.js" type="module"></script><script src="main-es5.70df27a7bb6caa4f60ef.js" nomodule defer></script></body>
+<script src="runtime-es2015.e8a2810b3b08d6a1b6aa.js" type="module"></script><script src="runtime-es5.e8a2810b3b08d6a1b6aa.js" nomodule defer></script><script src="polyfills-es5.931f63c2feef40f602a6.js" nomodule defer></script><script src="polyfills-es2015.0ef207fb7b4761464817.js" type="module"></script><script src="scripts.6cf4da7113bcd1218d80.js" defer></script><script src="main-es2015.cd0c8a1d219aadaa6b93.js" type="module"></script><script src="main-es5.cd0c8a1d219aadaa6b93.js" nomodule defer></script></body>
+
 </html>
