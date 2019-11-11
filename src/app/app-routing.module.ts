@@ -13,8 +13,8 @@ const routes: Routes = [
   {path:'fontawesome',component:MainComponent},
   {path:'material-icons',component:MaterialIconsComponent},
   {path:'about',component:AboutComponent},
-  {path:'mi-details/:no',component:MiDetailsComponent},
-  {path:'details/:no',component:IconDetailsComponent},
+  {path:'mi-details',component:MiDetailsComponent},
+  {path:'details',component:IconDetailsComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 

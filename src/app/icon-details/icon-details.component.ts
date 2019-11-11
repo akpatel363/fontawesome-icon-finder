@@ -11,8 +11,8 @@ export class IconDetailsComponent implements OnInit {
   no:number
   className:string
   constructor(private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.paramMap.subscribe((obj)=>{
-      this.no = obj['params'].no
+    this.activatedRoute.queryParamMap.subscribe((query)=>{
+      this.no = Number.parseInt(query.get('no'))
       this.className = data[this.no]
     })
   }

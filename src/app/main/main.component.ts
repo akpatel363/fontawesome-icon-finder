@@ -20,7 +20,11 @@ export class MainComponent implements OnInit {
     }
   }
   navigate(className:string){
-    this.router.navigate(['/details',data.indexOf(className)])
+    this.router.navigate(['/details'],{
+      queryParams:{
+        no:data.indexOf(className)
+      }
+    })
   }
   filter(query:string){
     this.classes = data.filter((value,index)=>{
