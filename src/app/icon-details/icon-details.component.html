@@ -1,21 +1,37 @@
-<div class="container" *ngIf="no<676; else notFound">
-    <div class="my-4 py-3 text-center h4">
-        <i [class]="className.concat(' px-2 px-sm-3 display-2')"></i>
-        <i [class]="className.concat(' px-2 px-sm-3 display-3')"></i>
-        <i [class]="className.concat(' px-2 px-sm-3 display-4')"></i>
-        <i [class]="className.concat(' px-2 px-sm-3')"></i>
+<div class="container">
+    <div *ngIf="type=='fa'&&no<675">
+        <div class="my-4 py-3 text-center h4">
+            <i [class]="className.concat(' px-2 px-sm-3 display-2')"></i>
+            <i [class]="className.concat(' px-2 px-sm-3 display-3')"></i>
+            <i [class]="className.concat(' px-2 px-sm-3 display-4')"></i>
+            <i [class]="className.concat(' d-sm-inline d-none px-2 px-sm-3')"></i>
+        </div>
+        <i class="fa fa-air-freshener"></i>
+        <div class="py-3">
+            <p class="display-4">{{className}}</p>
+            <h5>&lt;i class="<strong>{{className}}</strong>"&gt;&lt;/i&gt;</h5>
+        </div>
+        <div class="alert alert-primary my-3">
+            For all these icons you must include the fontawesome css file in your HTML document.<br>You can find the web link <a class="alert-link" href="https://www.bootstrapcdn.com/fontawesome/">here.</a>.
+        </div>
     </div>
-    <i class="fa fa-air-freshener"></i>
-    <div class="py-3">
-        <p class="display-4">{{className}}</p>
-        <h5>&lt;i class="<strong>{{className}}</strong>"&gt;&lt;/i&gt;</h5>
+    <div *ngIf="type=='mi'&&no<1057">
+        <div class=" pt-2 mt-2 text-center">
+            <i class="material-icons" style="font-size: 120px;">{{className}}</i>
+            <i class="material-icons" style="font-size: 90px;">{{className}}</i>
+            <i class="material-icons" style="font-size: 70px;">{{className}}</i>
+            <i class="material-icons d-sm-inline d-none " style="font-size: 48px;">{{className}}</i>
+        </div>
+        <div class="pt-3">
+            <h2 class="my-3">{{className}}</h2>
+            <h5>&lt;i class="material-icons"&gt;{{className}}&lt;/i&gt;</h5>
+        </div>
+        <div class="alert alert-primary my-3">
+            For all these icons you must include the Google Material Icons Link in your HTML document.<br>You can find the link <a class="alert-link" href="https://fonts.googleapis.com/icon?family=Material+Icons">here.</a>.
+        </div>
     </div>
-    <div class="alert alert-primary my-3">
-        For all these icons you must include the fontawesome css file in your HTML document.<br>
-        You can find the web link <a class="alert-link" href="https://www.bootstrapcdn.com/fontawesome/">here.</a>.
-    </div>
+    <div *ngIf="error!=1; else notFound"></div>
 </div>
-
 <ng-template #notFound>
     <div class="container text-center">
         <h1 class="my-3 pt-3">Nothing Found.</h1>

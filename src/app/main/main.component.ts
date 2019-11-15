@@ -22,6 +22,7 @@ export class MainComponent implements OnInit {
   navigate(className:string){
     this.router.navigate(['/details'],{
       queryParams:{
+        type:'fa',
         no:data.indexOf(className)
       }
     })

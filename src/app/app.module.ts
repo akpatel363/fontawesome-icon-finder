@@ -9,7 +9,6 @@ import { IconDetailsComponent } from './icon-details/icon-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { MaterialIconsComponent } from './material-icons/material-icons.component';
-import { MiDetailsComponent } from './mi-details/mi-details.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { MiDetailsComponent } from './mi-details/mi-details.component';
     IconDetailsComponent,
     FooterComponent,
     AboutComponent,
-    MaterialIconsComponent,
-    MiDetailsComponent
+    MaterialIconsComponent
   ],
   imports: [
     BrowserModule,

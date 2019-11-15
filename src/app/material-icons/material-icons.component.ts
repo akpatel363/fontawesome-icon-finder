@@ -12,8 +12,9 @@ export class MaterialIconsComponent implements OnInit {
   constructor(private router:Router) {}
   ngOnInit() {}
   navigate(className:string){
-    this.router.navigate(['mi-details'],{
+    this.router.navigate(['/details'],{
       queryParams:{
+        type:'mi',
         no:google_icons.indexOf(className)
       }
     })
