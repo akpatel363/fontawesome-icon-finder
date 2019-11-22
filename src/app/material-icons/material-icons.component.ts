@@ -28,7 +28,7 @@ export class MaterialIconsComponent implements OnInit {
   }
   filter(query:string){
    this.classes = google_icons.filter((ele,index)=>{
-    if(ele.includes(query)){
+    if(ele.includes(query.toLowerCase())){
       return ele
     }
    }) 

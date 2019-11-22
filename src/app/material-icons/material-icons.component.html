@@ -1,6 +1,6 @@
 <div class="container">
     <input type="text" class="form-control mt-3" placeholder="Search Here" (keyup)="submit(input)" #input>
-    <p class="display-4">Icons</p>
+    <p class="display-4 mt-1 mb-3">Icons</p>
     <div class="row" *ngIf="classes.length>0; else nothingFound">
         <div class="col-xl-1 col-lg-1 col-md-2 col-3 h1 text-center" *ngFor="let class of classes">
             <i class="material-icons h1" (click)="navigate(class)">{{class}}</i>
